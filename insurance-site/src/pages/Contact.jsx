@@ -18,12 +18,12 @@ export default function Contact() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid gap-10 lg:grid-cols-2">
-      <Reveal>
-        <h1 className="text-2xl font-semibold">İletişim</h1>
-        <p className="mt-2 text-slate-600">Sorularınız ve teklif talepleriniz için bize yazabilirsiniz.</p>
-      </Reveal>
-
       <div>
+        <Reveal>
+          <h1 className="text-2xl font-semibold">İletişim</h1>
+          <p className="mt-2 text-slate-600">Sorularınız ve teklif talepleriniz için bize yazabilirsiniz.</p>
+        </Reveal>
+
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <div>
             <label className="block text-sm font-medium">Ad Soyad</label>

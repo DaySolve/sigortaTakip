@@ -32,7 +32,7 @@ export default function Home() {
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h2 className="text-2xl font-semibold mb-8">Hizmetlerimiz</h2>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {[
             { title: 'Trafik ve Kasko', desc: 'Araçlarınız için kapsamlı koruma.' },
             { title: 'Konut', desc: 'Evinizi ve eşyalarınızı güvence altına alın.' },
@@ -75,10 +75,10 @@ export default function Home() {
       <section className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <h3 className="text-center text-sm uppercase tracking-wide text-slate-500">Çalıştığımız Sigorta Şirketleri</h3>
-          <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center">
-            {['Allianz', 'AXA', 'Anadolu', 'Mapfre', 'HDI'].map((brand) => (
-              <div key={brand} className="h-12 grayscale opacity-70 hover:opacity-100 transition flex items-center justify-center border rounded-lg bg-slate-50">
-                <span className="text-slate-500 text-sm">{brand}</span>
+          <div className="mt-6 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4 items-center">
+            {['Allianz', 'AXA', 'Anadolu', 'Mapfre', 'HDI', 'Sompo'].map((brand) => (
+              <div key={brand} className="h-8 md:h-10 grayscale opacity-70 hover:opacity-100 transition flex items-center justify-center border rounded-md bg-slate-50 px-2">
+                <span className="text-slate-500 text-xs md:text-sm">{brand}</span>
               </div>
             ))}
           </div>
