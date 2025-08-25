@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import Reveal from '../components/Reveal.jsx'
+
 export default function Contact() {
   const [formState, setFormState] = useState({ name: '', email: '', phone: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
@@ -16,30 +18,32 @@ export default function Contact() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid gap-10 lg:grid-cols-2">
-      <div>
+      <Reveal>
         <h1 className="text-2xl font-semibold">İletişim</h1>
         <p className="mt-2 text-slate-600">Sorularınız ve teklif talepleriniz için bize yazabilirsiniz.</p>
+      </Reveal>
 
+      <div>
         <form onSubmit={handleSubmit} className="mt-6 space-y-4">
           <div>
             <label className="block text-sm font-medium">Ad Soyad</label>
-            <input name="name" value={formState.name} onChange={handleChange} required className="mt-1 w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Adınız Soyadınız" />
+            <input name="name" value={formState.name} onChange={handleChange} required className="mt-1 w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600 transition-shadow focus:shadow-[0_0_0_4px_rgba(37,99,235,0.15)]" placeholder="Adınız Soyadınız" />
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
               <label className="block text-sm font-medium">E-posta</label>
-              <input type="email" name="email" value={formState.email} onChange={handleChange} required className="mt-1 w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="ornek@mail.com" />
+              <input type="email" name="email" value={formState.email} onChange={handleChange} required className="mt-1 w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600 transition-shadow focus:shadow-[0_0_0_4px_rgba(37,99,235,0.15)]" placeholder="ornek@mail.com" />
             </div>
             <div>
               <label className="block text-sm font-medium">Telefon</label>
-              <input name="phone" value={formState.phone} onChange={handleChange} className="mt-1 w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="05xx xxx xx xx" />
+              <input name="phone" value={formState.phone} onChange={handleChange} className="mt-1 w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600 transition-shadow focus:shadow-[0_0_0_4px_rgba(37,99,235,0.15)]" placeholder="05xx xxx xx xx" />
             </div>
           </div>
           <div>
             <label className="block text-sm font-medium">Mesajınız</label>
-            <textarea name="message" value={formState.message} onChange={handleChange} rows={5} className="mt-1 w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600" placeholder="Nasıl yardımcı olabiliriz?" />
+            <textarea name="message" value={formState.message} onChange={handleChange} rows={5} className="mt-1 w-full rounded-md border px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600 transition-shadow focus:shadow-[0_0_0_4px_rgba(37,99,235,0.15)]" placeholder="Nasıl yardımcı olabiliriz?" />
           </div>
-          <button type="submit" className="inline-flex rounded-md bg-blue-600 text-white px-4 py-2 hover:bg-blue-700">Gönder</button>
+          <button type="submit" className="inline-flex rounded-md bg-blue-600 text-white px-5 py-2.5 hover:bg-blue-700 transition-transform active:scale-[0.98]">Gönder</button>
 
           {submitted && (
             <p className="text-green-600 text-sm">Teşekkürler! Mesajınızı aldık.</p>

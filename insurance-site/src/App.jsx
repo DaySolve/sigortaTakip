@@ -3,16 +3,16 @@ import { Outlet } from 'react-router-dom'
 function App() {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b bg-white sticky top-0 z-40">
+      <header className="border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2">
-            <img src="/vite.svg" alt="Logo" className="h-8 w-8" />
+          <a href="/" className="flex items-center gap-2 group">
+            <img src="/vite.svg" alt="Logo" className="h-8 w-8 group-hover:scale-110 transition-transform" />
             <span className="font-semibold text-lg">Kenan Aslan Sigortam</span>
           </a>
           <nav className="hidden md:flex items-center gap-6">
-            <a href="/" className="hover:text-blue-600">Ana Sayfa</a>
-            <a href="/appointment" className="hover:text-blue-600">Randevu</a>
-            <a href="/contact" className="hover:text-blue-600">İletişim</a>
+            <a href="/" className="link-underline hover:text-blue-600">Ana Sayfa</a>
+            <a href="/appointment" className="link-underline hover:text-blue-600">Randevu</a>
+            <a href="/contact" className="link-underline hover:text-blue-600">İletişim</a>
           </nav>
           <button className="md:hidden p-2 rounded hover:bg-slate-100" aria-label="Menu">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6"><path fillRule="evenodd" d="M3.75 5.25a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75Zm0 6.75c0-.414.336-.75.75-.75h15a.75.75 0 0 1 0 1.5h-15a.75.75 0 0 1-.75-.75Zm.75 6a.75.75 0 0 0 0 1.5h15a.75.75 0 0 0 0-1.5h-15Z" clipRule="evenodd" /></svg>
