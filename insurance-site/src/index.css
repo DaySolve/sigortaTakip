@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+/* Base app scaffolding */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply antialiased text-slate-800 bg-white;
+}
