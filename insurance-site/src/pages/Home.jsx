@@ -3,8 +3,12 @@ import Reveal from '../components/Reveal.jsx'
 export default function Home() {
   return (
     <div>
-      <section className="relative overflow-hidden text-white bg-gradient-animated">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 grid gap-8 md:grid-cols-2 items-center">
+      <section className="relative overflow-hidden text-white">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544256718-3bcf237f3974?q=80&w=1974&auto=format&fit=crop')] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-blue-900/60" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid gap-8 md:grid-cols-2 items-center">
           <Reveal>
             <div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">Güvenilir Sigorta Çözümleri</h1>
@@ -17,8 +21,8 @@ export default function Home() {
           </Reveal>
           <Reveal delayMs={100}>
             <div className="relative">
-              <div className="aspect-[4/3] bg-white/10 rounded-xl ring-1 ring-white/20 backdrop-blur-sm flex items-center justify-center animated-gradient">
-                <span className="text-white/80">Sigorta görseli</span>
+              <div className="aspect-[4/3] rounded-xl ring-1 ring-white/20 backdrop-blur-sm overflow-hidden">
+                <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?q=80&w=2070&auto=format&fit=crop" alt="Sigorta hizmetleri" />
               </div>
             </div>
           </Reveal>
@@ -65,6 +69,42 @@ export default function Home() {
               <a href="/contact" className="mt-4 inline-flex rounded-md bg-blue-600 text-white px-4 py-2 hover:bg-blue-700">İletişim</a>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <h3 className="text-center text-sm uppercase tracking-wide text-slate-500">Çalıştığımız Sigorta Şirketleri</h3>
+          <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center">
+            {['Allianz', 'AXA', 'Anadolu', 'Mapfre', 'HDI'].map((brand) => (
+              <div key={brand} className="h-12 grayscale opacity-70 hover:opacity-100 transition flex items-center justify-center border rounded-lg bg-slate-50">
+                <span className="text-slate-500 text-sm">{brand}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-2xl font-semibold text-center">Müşteri Yorumları</h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+            {[1,2,3].map((i) => (
+              <Reveal key={i}>
+                <div className="rounded-xl border bg-white p-6 shadow-sm">
+                  <p className="text-slate-700">Hızlı ve ilgili hizmet aldım. Teklifler kısa sürede geldi, tavsiye ederim.</p>
+                  <div className="mt-4 text-sm text-slate-500">Müşteri {i}</div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
+          <h3 className="text-xl font-semibold">Sigortanız için en uygun teklifi şimdi alın</h3>
+          <a href="/appointment" className="inline-flex rounded-md bg-blue-600 text-white px-5 py-3 hover:bg-blue-700">Ücretsiz Teklif Al</a>
         </div>
       </section>
     </div>
